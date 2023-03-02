@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+
+    .Wrapper{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &__inner{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        &__name{
+            font-size: 40px;
+        }
+
+        &__button{
+            font-size: 30px;
+            border: none;
+            padding: 6px 9px;
+            border-radius: 8px;
+            background-color: antiquewhite;
+            cursor: pointer;
+            transition: .2s linear;
+        }
+
+        &__button:hover{
+            background-color: aquamarine;
+        }
+
+        .Modal{
+            position: absolute;
+            z-index: 2;
+            background-color: rgba(0,0,0,.3);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .2s ease-in;
+
+
+
+            &__window{
+                background-color: #fff;
+                max-width: 70%;
+                min-height: 300px;
+                width: auto;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 4px 6px;
+                z-index: 3;
+                text-align: center;
+                position: relative;
+                opacity: 0;
+                transition: .3s linear;
+            }
+
+            // &__window.show{
+            //     opacity: 1;
+            // }
+
+            &__close{
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                border: none;
+                background-color: red;
+                color: aqua;
+                cursor: pointer;
+            }
+        }
+    }
+
+    footer{
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        background-color: #2a2a2a;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
