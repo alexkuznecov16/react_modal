@@ -52,6 +52,7 @@ body{
             display: flex;
             justify-content: center;
             align-items: center;
+            opacity: 0;
             transition: .2s ease-in;
 
 
@@ -70,13 +71,13 @@ body{
                 z-index: 3;
                 text-align: center;
                 position: relative;
-                // opacity: 0;
-                // transition: .3s linear;
+                transition: .2s linear;
+                opacity: 0;
             }
 
-            // &__window.show{
-            //     opacity: 1;
-            // }
+            &__window.show{
+                opacity: 1;
+            }
 
             &__close{
                 position: absolute;
@@ -87,6 +88,9 @@ body{
                 color: aqua;
                 cursor: pointer;
             }
+        }
+        .Modal.show{
+            opacity: 1;
         }
     }
 

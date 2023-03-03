@@ -20,9 +20,10 @@ function App() {
         <button onClick={onClickOpen} className='Wrapper__button open-modal'>Open modal</button>
         </div>
         {
+          // if open = true =>
           open && (
-            <div className='Modal'>
-              <div className="Modal__window">
+            <div className={`Modal ${open ? 'show' : ''}`}>
+              <div className={`Modal__window ${open ? 'show' : ''}`}>
                 <h3 className='Modal__title'>Modal window</h3>
                 <p className='Modal__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi vel voluptates, ullam rerum expedita aperiam inventore eos non impedit doloremque.</p>
                 <button onClick={onClickClose} className='Modal__close close-modal'>X</button>
